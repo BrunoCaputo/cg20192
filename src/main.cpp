@@ -3,6 +3,11 @@
 #include <glad/glad.h>
 #include <glfw/glfw3.h>
 
+#include <glm/glm.hpp>
+#include <glm/ext.hpp>
+#include <glm/vec3.hpp>
+#include <glm/mat3x3.hpp>
+
 #include <iostream>
 
 using namespace std;
@@ -20,6 +25,17 @@ void keyboard(GLFWwindow * window, int key, int scancode, int action, int modifi
 }
 
 int main(int argc, char** argv) {
+	glm::vec3 u(2.0f, 0, 0);
+	glm::vec3 v(0, 1.0f, 0);
+	
+	glm::vec3 c = glm::normalize(u);
+	
+	float d = glm::dot(u, v);
+	
+	glm::mat3 m(1, 2, 3, 4, 5, 6, 7, 8, 9);
+	
+	cout << glm::to_string(m) << endl;
+	
 	if(!glfwInit()) {
 		cout << "Não foi possível inicializar o glfw" << endl;
 		return -1;		

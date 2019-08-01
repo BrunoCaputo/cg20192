@@ -10,7 +10,7 @@ PrivateResource=
 ResourceIncludes=
 MakeIncludes=
 Compiler=
-CppCompiler=-std=c++11_@@_
+CppCompiler=-std=c++11_@@_-DGLM_ENABLE_EXPERIMENTAL_@@_
 Linker=-lglu32_@@_-lopengl32_@@_-lglfw3dll_@@_
 IsCpp=1
 Icon=
